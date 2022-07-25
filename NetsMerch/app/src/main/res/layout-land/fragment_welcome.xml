@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bklyn_bg">
+        android:background="@drawable/bklyn_bg_land">
 
 
         <ImageView
@@ -62,15 +62,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/white"
-            android:fontFamily="@font/roboto_medium"
-            android:textSize="12sp"
-            android:textStyle="bold"
             android:text="@string/instructions_btn"
             android:textAlignment="center"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
 

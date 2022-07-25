@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bklyn_bg"
+        android:background="@drawable/bklyn_bg_land"
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="-8dp">
 
@@ -42,14 +42,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/email_prompt"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/emailTextView"
-            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline"
-            android:autofillHints="" />
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
 
         <TextView
             android:id="@+id/passwordTextView"
@@ -68,14 +68,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/password_prompt"
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/passwordTextView"
-            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline"
-            android:autofillHints="" />
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
 
         <Button
             android:id="@+id/loginBtn"

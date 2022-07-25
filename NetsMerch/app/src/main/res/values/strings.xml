@@ -3,7 +3,10 @@
     <string name="app_name">Nets Merch</string>
 
     <!-- Onboarding screen -->
-    <string name="welcome_text">Welcome to the Brooklyn Nets Merchandise App</string>
+    <string name="nets_logo">The Brooklyn Nets B logo</string>
+    <string name="welcome_txt">Welcome to the Brooklyn Nets Merchandise App</string>
+    <string name="shop_txt">Shop your favorite Nets gear and your favorite players jerseys</string>
+    <string name="instructions_btn">Instructions</string>
 
     <!-- Login screen -->
     <string name="email_text">Email</string>
