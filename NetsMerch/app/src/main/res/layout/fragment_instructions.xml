@@ -10,28 +10,40 @@
         android:background="@drawable/bklyn_bg">
 
 
-        <ImageView
+        <TextView
             android:id="@+id/instructionsTitle"
-            android:layout_width="200sp"
-            android:layout_height="200sp"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="@string/nets_logo"
-            android:src="@drawable/nets_merch"
+            android:text="@string/instructions_txt"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="#cccccc"
+            app:layout_constraintEnd_toEndOf="@+id/instructionsTitle"
+            app:layout_constraintStart_toStartOf="@+id/instructionsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTitle" />
 
         <TextView
             android:id="@+id/in1TextView"
             style="@style/WhiteText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/welcome_txt"
+            android:layout_marginEnd="32dp"
+            android:text="@string/instructions_1_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/instructionsTitle" />
@@ -44,10 +56,23 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/shop_txt"
+            android:text="@string/instructions_2_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/in1TextView" />
+
+        <TextView
+            android:id="@+id/in3TextView"
+            style="@style/WhiteText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/instructions_3_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/in2TextView" />
 
         <Button
             android:id="@+id/instructionsBtn"
@@ -58,7 +83,7 @@
             android:fontFamily="@font/roboto_medium"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:text="@string/instructions_btn"
+            android:text="@string/merch_list_btn"
             android:textAlignment="center"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"

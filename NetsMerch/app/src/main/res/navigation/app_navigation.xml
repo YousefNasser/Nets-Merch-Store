@@ -17,5 +17,15 @@
         android:id="@+id/welcomeFragment"
         android:name="com.example.netsmerch.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.netsmerch.InstructionsFragment"
+        android:label="InstructionsFragment"
+        tools:layout="@layout/fragment_instructions"/>
 </navigation>

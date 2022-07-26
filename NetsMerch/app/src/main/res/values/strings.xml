@@ -2,12 +2,6 @@
     <!-- App metadata -->
     <string name="app_name">Nets Merch</string>
 
-    <!-- Onboarding screen -->
-    <string name="nets_logo">The Brooklyn Nets B logo</string>
-    <string name="welcome_txt">Welcome to the Brooklyn Nets Merchandise App</string>
-    <string name="shop_txt">Shop your favorite Nets gear and your favorite players jerseys</string>
-    <string name="instructions_btn">Instructions</string>
-
     <!-- Login screen -->
     <string name="email_text">Email</string>
     <string name="email_prompt">Enter your email</string>
@@ -15,5 +9,18 @@
     <string name="password_prompt">Enter your Password</string>
     <string name="login_new">Register</string>
     <string name="login_existing">Login</string>
+
+    <!-- Onboarding screen -->
+    <string name="nets_logo">The Brooklyn Nets B logo</string>
+    <string name="welcome_txt">Welcome to the Brooklyn Nets Merchandise App</string>
+    <string name="shop_txt">Shop your favorite Nets gear and your favorite players jerseys</string>
+    <string name="instructions_btn">Instructions</string>
+
+    <!-- Instructions screen -->
+    <string name="instructions_txt">Instructions</string>
+    <string name="instructions_1_txt">Explore all the Nets merchandise through the listings screen</string>
+    <string name="instructions_2_txt">Add new items to the Listings via Add New button in the Listings screen</string>
+    <string name="instructions_3_txt">Have fun, Let\'s go Nets!</string>
+    <string name="merch_list_btn">Merch List</string>
 
 </resources>
