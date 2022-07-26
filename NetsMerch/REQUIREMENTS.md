@@ -14,7 +14,7 @@ Open the starter project in the latest stable version of Android Studio.
 
 Open the starter project in Android Studio
 
-##Steps
+## Steps
 
 1. Open the starter project in Android Studio
 
@@ -80,7 +80,7 @@ Open the starter project in Android Studio
     * Observe the shoes variable from the ViewModel
     * Add a new layout item into the scrollview for each shoe.
 
-##Suggestions to Make Your Project Stand Out!
+## Suggestions to Make Your Project Stand Out!
 
 1. The student uses styling on the TextViews and buttons 
 
