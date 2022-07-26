@@ -27,5 +27,27 @@
         android:id="@+id/instructionsFragment"
         android:name="com.example.netsmerch.screens.instructions.InstructionsFragment"
         android:label="InstructionsFragment"
-        tools:layout="@layout/fragment_instructions"/>
+        tools:layout="@layout/fragment_instructions">
+        <action
+            android:id="@+id/action_instructionsFragment_to_listingsFragment"
+            app:destination="@id/listingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewFragment"
+        android:name="com.example.netsmerch.screens.addnew.AddNewFragment"
+        android:label="fragment_add_new"
+        tools:layout="@layout/fragment_add_new" >
+        <action
+            android:id="@+id/action_addNewFragment_to_listingsFragment"
+            app:destination="@id/listingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingsFragment"
+        android:name="com.example.netsmerch.screens.listings.ListingsFragment"
+        android:label="fragment_listings"
+        tools:layout="@layout/fragment_listings" >
+        <action
+            android:id="@+id/action_listingsFragment_to_addNewFragment"
+            app:destination="@id/addNewFragment" />
+    </fragment>
 </navigation>

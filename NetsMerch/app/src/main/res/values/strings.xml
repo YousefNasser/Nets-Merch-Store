@@ -23,4 +23,9 @@
     <string name="instructions_3_txt">Have fun, Let\'s go Nets!</string>
     <string name="merch_list_btn">Merch List</string>
 
+    <!-- Add New screen -->
+    <string name="cancel_btn">Cancel</string>
+    <string name="save_btn">Save</string>
+    <string name="add_new_description">Add new item button</string>
+
 </resources>

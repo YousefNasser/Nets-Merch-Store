@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.netsmerch.R
 import com.example.netsmerch.databinding.FragmentInstructionsBinding
 
@@ -22,8 +23,9 @@ class InstructionsFragment : Fragment() {
         )
 
         binding.instructionsBtn.setOnClickListener {
-            // findNavController().navigate()
+            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListingsFragment())
         }
+
         return binding.root
     }
 }
