@@ -4,33 +4,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.listings.ListingsFragment">
 
+    <data>
+
+        <variable
+            name="listingsViewModel"
+            type="com.example.netsmerch.screens.listings.ListingsViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bklyn_bg">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/save_btn"
-                style="@style/WhiteText"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/WhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/merch_listings"
+                    android:textAllCaps="true"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#cccccc" />
+
+
+
+
+            </LinearLayout>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:contentDescription="@string/add_new_description"
                 android:focusable="true"
-                android:src="@android:drawable/ic_menu_add" />
+                android:src="@android:drawable/ic_menu_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
