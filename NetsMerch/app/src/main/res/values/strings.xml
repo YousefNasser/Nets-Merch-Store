@@ -26,8 +26,16 @@
     <!-- Add New screen -->
     <string name="cancel_btn">Cancel</string>
     <string name="save_btn">Save</string>
-    <string name="add_new_description">Add new item button</string>
-    <string name="temp">klfj sdklfjsdkljf klsdfj kasdjf klsdjfklsdjf klsdjfklsdjfkl sdjfkl jsklf jsdklfjsdl</string>
+    <string name="add_new_description">Adds new item</string>
     <string name="merch_listings">Merch Listings</string>
+    <string name="add_new">Add New</string>
+    <string name="name">Name</string>
+    <string name="enter_name_hint">Enter merch name</string>
+    <string name="company_name_hint">Enter company name</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="company">Company</string>
+    <string name="size_hint">Enter the size</string>
+    <string name="description_hint">Enter merch description</string>
 
 </resources>

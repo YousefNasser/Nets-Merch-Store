@@ -20,6 +20,7 @@ class ListingsViewModel : ViewModel() {
             Merch("Harris #12 Jersey", "Nike", "S", "Nets City Edition Jersey"),
             Merch("Simmons #10 Jersey", "Nike", "L", "Nets Association White Jersey"),
             Merch("Mills #8 Jersey", "Nike", "M", "Nets Association Black Jersey"),
+            Merch("Thomas #24 Shorts", "Nike", "M", "Nets Association Black Shorts"),
         )
     }
 

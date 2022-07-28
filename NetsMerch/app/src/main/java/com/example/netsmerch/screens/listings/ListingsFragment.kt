@@ -52,12 +52,10 @@ class ListingsFragment : Fragment() {
                 val textView = TextView(context)
                 textView.text = "${merch.name}\n${merch.company}\n" +
                         "${merch.size}\n" +
-                        "${merch.description} "
+                        "${merch.description}\n\n\n "
 
-                textView.textSize = 32F
-                textView.setTextColor(resources.getColor(R.color.white))
+                textView.setTextAppearance(R.style.MerchText)
                 textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
-
                 linearLayout.addView(textView)
             }
         })

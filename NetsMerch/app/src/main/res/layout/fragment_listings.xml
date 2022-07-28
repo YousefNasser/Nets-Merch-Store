@@ -11,43 +11,62 @@
             type="com.example.netsmerch.screens.listings.ListingsViewModel" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bklyn_bg">
+        android:background="@drawable/bklyn_bg_listings">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/firstThirdVGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <TextView
+                android:id="@+id/merchTitle"
+                style="@style/WhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/merch_listings"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="2dp"
+                android:background="#cccccc"
+                app:layout_constraintEnd_toEndOf="@+id/merchTitle"
+                app:layout_constraintStart_toStartOf="@+id/merchTitle"
+                app:layout_constraintTop_toBottomOf="@+id/merchTitle" />
+
+
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/WhiteText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="@string/merch_listings"
-                    android:textAllCaps="true"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-
-                <View
-                    android:layout_width="200dp"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="#cccccc" />
-
-
-
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.962">
 
             </LinearLayout>
 
@@ -55,17 +74,15 @@
                 android:id="@+id/floatingActionBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="24dp"
-                android:layout_weight="1"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:clickable="true"
                 android:contentDescription="@string/add_new_description"
                 android:focusable="true"
-                android:src="@android:drawable/ic_menu_add"
+                android:src="@android:drawable/ic_input_add"
+                app:backgroundTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

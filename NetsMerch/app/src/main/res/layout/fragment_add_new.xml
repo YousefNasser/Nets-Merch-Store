@@ -14,8 +14,156 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bklyn_bg">
+        android:background="@drawable/bklyn_bg_listings">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstThirdVGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstThirdHGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <TextView
+            android:id="@+id/addNewTitle"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/add_new"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="#cccccc"
+            app:layout_constraintEnd_toEndOf="@+id/addNewTitle"
+            app:layout_constraintStart_toStartOf="@+id/addNewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/addNewTitle" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/name"
+            app:layout_constraintEnd_toStartOf="@+id/firstThirdVGuideline"
+            app:layout_constraintTop_toTopOf="@+id/firstThirdHGuideline" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            style="@style/WhiteText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:hint="@string/enter_name_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameTextView"
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
+
+        <TextView
+            android:id="@+id/companyTextView"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/company"
+            app:layout_constraintEnd_toStartOf="@+id/firstThirdVGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <EditText
+            android:id="@+id/editTextCompany"
+            style="@style/WhiteText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints="password"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:hint="@string/company_name_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyTextView"
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
+
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/size"
+            app:layout_constraintEnd_toStartOf="@+id/firstThirdVGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/companyTextView" />
+
+        <EditText
+            android:id="@+id/editTextSize"
+            style="@style/WhiteText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:hint="@string/size_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeTextView"
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/WhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/description"
+            app:layout_constraintEnd_toStartOf="@+id/firstThirdVGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/sizeTextView" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            style="@style/WhiteText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
 
         <Button
             android:id="@+id/saveBtn"
