@@ -4,14 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.listings.ListingsFragment">
 
-    <data>
-
-        <variable
-            name="listingsViewModel"
-            type="com.example.netsmerch.screens.listings.ListingsViewModel" />
-    </data>
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

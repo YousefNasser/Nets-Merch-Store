@@ -1,37 +1,22 @@
 package com.example.netsmerch.screens.listings
 
-import android.content.res.Resources
-import android.graphics.Paint
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.print.PrintAttributes
-import android.text.Layout
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
-import androidx.annotation.ColorInt
-import androidx.annotation.Dimension
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.core.view.marginBottom
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LifecycleObserver
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.netsmerch.MerchViewModel
 import com.example.netsmerch.R
 import com.example.netsmerch.databinding.FragmentListingsBinding
 
 class ListingsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ListingsFragment()
-    }
-
-    private lateinit var viewModel: ListingsViewModel
+    private val viewModel: MerchViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,15 +25,9 @@ class ListingsFragment : Fragment() {
         val binding: FragmentListingsBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_listings, container, false)
 
-        viewModel = ViewModelProvider(this)[ListingsViewModel::class.java]
-
-        binding.listingsViewModel = viewModel
-
-        binding.lifecycleOwner = this
-
-        viewModel.merchList.observe(viewLifecycleOwner, Observer {
+        viewModel.merchList.observe(viewLifecycleOwner, Observer { list ->
             val linearLayout = binding.linearLayout
-            for (merch in it) {
+            for (merch in list) {
                 val textView = TextView(context)
                 textView.text = "${merch.name}\n${merch.company}\n" +
                         "${merch.size}\n" +

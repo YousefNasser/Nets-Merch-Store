@@ -5,10 +5,9 @@
     tools:context=".screens.addnew.AddNewFragment">
 
     <data>
-
         <variable
-            name="addNewViewModel"
-            type="com.example.netsmerch.screens.addnew.AddNewViewModel" />
+            name="merchViewModel"
+            type="com.example.netsmerch.MerchViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
