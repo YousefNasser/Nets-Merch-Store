@@ -18,6 +18,7 @@ import com.example.netsmerch.entities.Merch
 class AddNewFragment : Fragment() {
 
     private val viewModel: MerchViewModel by activityViewModels()
+    private var merch = Merch()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,24 +29,10 @@ class AddNewFragment : Fragment() {
         val binding: FragmentAddNewBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_add_new, container, false)
 
+        binding.merch = merch
+
         binding.saveBtn.setOnClickListener {
-            // TODO: Implement the save merch process
-
-            if (validData(
-                    binding.editTextName.text.toString(),
-                    binding.editTextCompany.text.toString(),
-                    binding.editTextSize.text.toString(),
-                    binding.editTextDescription.text.toString()
-                )
-            ) {
-
-                val merch = Merch(
-                    binding.editTextName.text.toString(),
-                    binding.editTextCompany.text.toString(),
-                    binding.editTextSize.text.toString(),
-                    binding.editTextDescription.text.toString()
-                )
-
+            if (validData(merch)) {
                 viewModel.addNewMerch(merch)
                 findNavController().navigate(AddNewFragmentDirections.actionAddNewFragmentToListingsFragment())
             } else {
@@ -56,23 +43,16 @@ class AddNewFragment : Fragment() {
 
         binding.cancelBtn.setOnClickListener {
             findNavController().navigate(AddNewFragmentDirections.actionAddNewFragmentToListingsFragment())
-
-            // TODO: Make sure to destroy the add new fragment or keep it? we'll see the requirements.
         }
 
         return binding.root
     }
 
-    private fun validData(
-        name: String,
-        company: String,
-        size: String,
-        description: String
-    ): Boolean {
-        return name.isNotBlank() &&
-                company.isNotBlank() &&
-                size.isNotBlank() &&
-                description.isNotBlank()
+    private fun validData(merch: Merch): Boolean {
+        return merch.name.isNotBlank() &&
+                merch.company.isNotBlank() &&
+                merch.size.isNotBlank() &&
+                merch.description.isNotBlank()
     }
 
 }

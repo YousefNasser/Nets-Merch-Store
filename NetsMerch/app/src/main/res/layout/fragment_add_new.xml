@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.addnew.AddNewFragment">
 
+    <!-- Using two-way data binding for the merch data-->
     <data>
 
         <variable
-            name="merchViewModel"
-            type="com.example.netsmerch.MerchViewModel" />
+            name="merch"
+            type="com.example.netsmerch.entities.Merch" />
     </data>
 
     <!-- Constraint layout to facilitates the design by sorting the views relative to each other and their parent accordingly -->
@@ -81,6 +82,7 @@
             android:hint="@string/enter_name_hint"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:text="@={merch.name}"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/nameTextView"
             app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
@@ -108,6 +110,7 @@
             android:hint="@string/company_name_hint"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:text="@={merch.company}"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/companyTextView"
             app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline" />
@@ -136,6 +139,7 @@
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:text="@={merch.size}"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/sizeTextView"
             app:layout_constraintStart_toStartOf="@+id/firstThirdVGuideline"
@@ -163,6 +167,7 @@
             android:hint="@string/description_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={merch.description}"
             android:minHeight="48dp"
             android:textColorHint="#cccccc"
             app:layout_constraintBaseline_toBaselineOf="@+id/descriptionTextView"
