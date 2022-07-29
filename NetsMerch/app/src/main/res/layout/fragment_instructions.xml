@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.welcome.WelcomeFragment">
 
+    <!-- Constraint layout to facilitates the design by sorting the views relative to each other and their parent accordingly -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -81,11 +82,11 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/roboto_medium"
-            android:textSize="12sp"
-            android:textStyle="bold"
             android:text="@string/merch_list_btn"
             android:textAlignment="center"
             android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

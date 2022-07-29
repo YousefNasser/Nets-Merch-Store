@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.login.LoginFragment">
 
+    <!-- Constraint layout to facilitates the design by sorting the views relative to each other and their parent accordingly -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,6 +12,7 @@
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="-8dp">
 
+        <!-- Vertical constraint layout guideline to help further constraint the views -->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/firstThirdVGuideline"
             android:layout_width="wrap_content"
@@ -18,6 +20,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.3" />
 
+        <!-- Horizontal constraint layout guideline to help further constraint the views -->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/firstThirdHGuideline"
             android:layout_width="wrap_content"

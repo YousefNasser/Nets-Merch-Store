@@ -5,16 +5,19 @@
     tools:context=".screens.addnew.AddNewFragment">
 
     <data>
+
         <variable
             name="merchViewModel"
             type="com.example.netsmerch.MerchViewModel" />
     </data>
 
+    <!-- Constraint layout to facilitates the design by sorting the views relative to each other and their parent accordingly -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bklyn_bg_listings">
 
+        <!-- Vertical constraint layout guideline to help further constraint the views -->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/firstThirdVGuideline"
             android:layout_width="wrap_content"
@@ -22,6 +25,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.3" />
 
+        <!-- Horizontal constraint layout guideline to help further constraint the views -->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/firstThirdHGuideline"
             android:layout_width="wrap_content"
