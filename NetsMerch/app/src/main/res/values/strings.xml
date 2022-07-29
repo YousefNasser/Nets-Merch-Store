@@ -37,5 +37,6 @@
     <string name="company">Company</string>
     <string name="size_hint">Enter the size</string>
     <string name="description_hint">Enter merch description</string>
+    <string name="logout_menu">Logout</string>
 
 </resources>
