@@ -21,9 +21,12 @@ class WelcomeFragment : Fragment() {
             inflater, R.layout.fragment_welcome, container, false
         )
 
+        // Setting up the instructions button click listener to navigate to the instructions page.
         binding.instructionsBtn.setOnClickListener {
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
+
+        // Returns the layout view
         return binding.root
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.addnew.AddNewFragment">
 
-    <!-- Using two-way data binding for the merch data-->
+    <!-- Using two-way data binding for the merch data -->
     <data>
 
         <variable
