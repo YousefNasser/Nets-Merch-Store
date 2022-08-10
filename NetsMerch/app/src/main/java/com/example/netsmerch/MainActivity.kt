@@ -20,21 +20,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        // Getting the navController
         navHostFragment = binding.myNavHostFragment.getFragment()
         navController = navHostFragment.navController
+
+        // Building the app bar for all fragments except login and listings fragments.
         appBarConfiguration =
             AppBarConfiguration.Builder(R.id.listingsFragment, R.id.loginFragment).build()
 
+        // Setting up the Action Bar
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-
-        navHostFragment = binding.myNavHostFragment.getFragment()
-        navController = navHostFragment.navController
-        appBarConfiguration =
-            AppBarConfiguration.Builder(R.id.listingsFragment, R.id.loginFragment).build()
-
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+        return navController.navigateUp()
     }
 }
