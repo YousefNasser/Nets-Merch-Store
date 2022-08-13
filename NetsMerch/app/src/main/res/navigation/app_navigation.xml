@@ -62,5 +62,9 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/app_navigation"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listingsFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:launchSingleTop="true" />
     </fragment>
 </navigation>

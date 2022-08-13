@@ -26,6 +26,9 @@
     <!-- Listings screen -->
     <string name="merch_listings">Merch Listings</string>
     <string name="add_new_description">Adds new item</string>
+    <string name="size_listings">Size: </string>
+    <string name="description_listings">Description: </string>
+    <string name="company_listings">Company: </string>
 
     <!-- Menu -->
     <string name="logout_menu_item">Logout</string>
@@ -46,6 +49,7 @@
     <string name="company_name_hint">Enter company name</string>
     <string name="size_hint">Enter the size</string>
     <string name="description_hint">Enter merch description</string>
+    <string name="instructions_menu_item">Instructions</string>
 
 
 </resources>

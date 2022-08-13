@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.example.netsmerch.entities.Merch
 
 class MerchViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
 
     private val _merchList = MutableLiveData<MutableList<Merch>>()
     val merchList: LiveData<MutableList<Merch>>

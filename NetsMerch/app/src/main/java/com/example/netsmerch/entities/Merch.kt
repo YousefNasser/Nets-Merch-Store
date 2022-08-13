@@ -5,8 +5,4 @@ data class Merch(
     var company: String = "",
     var size: String = "",
     var description: String = ""
-) {
-    override fun toString(): String {
-        return "$name\n$company\n$size\n$description\n\n\n"
-    }
-}
+)

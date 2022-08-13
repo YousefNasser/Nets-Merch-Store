@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Constraint layout to facilitates the design by sorting the views relative to each other and their parent accordingly -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/bklyn_bg_listings">
+
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:textSize="@dimen/merch_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Simmons #10 Jersey" />
+
+        <TextView
+            android:id="@+id/companyTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyListingsTextView"
+            app:layout_constraintStart_toEndOf="@+id/companyListingsTextView"
+            tools:text="Nike" />
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeListingsTextView"
+            app:layout_constraintStart_toEndOf="@+id/sizeListingsTextView"
+            tools:text="L" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descriptionListingsTextView"
+            app:layout_constraintStart_toEndOf="@+id/descriptionListingsTextView"
+            tools:text="Nets Association White Jersey" />
+
+        <TextView
+            android:id="@+id/companyListingsTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/company_listings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <TextView
+            android:id="@+id/sizeListingsTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/size_listings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyListingsTextView" />
+
+        <TextView
+            android:id="@+id/descriptionListingsTextView"
+            style="@style/MerchText"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/description_listings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeListingsTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -11,10 +11,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.netsmerch.MerchViewModel
 import com.example.netsmerch.R
 import com.example.netsmerch.databinding.FragmentListingsBinding
+import com.example.netsmerch.databinding.NewMerchBinding
 import com.example.netsmerch.entities.Merch
+import com.example.netsmerch.screens.instructions.InstructionsFragmentDirections
 
 class ListingsFragment : Fragment() {
 
@@ -42,9 +45,19 @@ class ListingsFragment : Fragment() {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                requireView().findNavController()
-                    .navigate(ListingsFragmentDirections.actionListingsFragmentToLoginFragment())
-                return true
+                return when (menuItem.title) {
+                    "Logout" -> {
+                        requireView().findNavController()
+                            .navigate(ListingsFragmentDirections.actionListingsFragmentToLoginFragment())
+                        true
+                    }
+                    "Instructions" -> {
+                        requireView().findNavController()
+                            .navigate(ListingsFragmentDirections.actionListingsFragmentToInstructionsFragment())
+                        true
+                    }
+                    else -> false
+                }
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
@@ -52,8 +65,14 @@ class ListingsFragment : Fragment() {
         viewModel.merchList.observe(viewLifecycleOwner) { list ->
             val linearLayout = binding.linearLayout
             for (merch in list) {
-                val textView = generateTextView(merch)
-                linearLayout.addView(textView)
+                val merchBinding : NewMerchBinding = DataBindingUtil.inflate(layoutInflater, R.layout.new_merch, null, false)
+
+                merchBinding.nameTextView.text = merch.name
+                merchBinding.companyTextView.text = merch.company
+                merchBinding.sizeTextView.text =  merch.size
+                merchBinding.descriptionTextView.text = merch.description
+
+                linearLayout.addView(merchBinding.root)
             }
         }
 
@@ -61,21 +80,6 @@ class ListingsFragment : Fragment() {
         binding.floatingActionBtn.setOnClickListener {
             findNavController().navigate(ListingsFragmentDirections.actionListingsFragmentToAddNewFragment())
         }
-    }
-
-    /**
-     * Generates the textView by adding all the merch data as text and
-     * styles the textView.
-     *
-     * @param merch the Merch to be represented in the TextView
-     * @return Return the TextView representing the Merch data
-     */
-    private fun generateTextView(merch: Merch): TextView {
-        val textView = TextView(context)
-        textView.text = merch.toString()
-        textView.setTextAppearance(R.style.MerchText)
-        textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
-        return textView
     }
 
 }
