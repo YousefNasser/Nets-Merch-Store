@@ -16,13 +16,14 @@ class InstructionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
 
+        // Inflate the layout for this fragment
         val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_instructions, container, false
         )
 
-        binding.instructionsBtn.setOnClickListener {
+        // Setting up the instructions button click listener to navigate to the instructions page.
+        binding.listingsBtn.setOnClickListener {
             findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListingsFragment())
         }
 

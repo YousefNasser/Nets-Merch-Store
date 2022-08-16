@@ -24,13 +24,15 @@ class AddNewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
 
+        // Inflate the layout for this fragment
         val binding: FragmentAddNewBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_add_new, container, false)
 
+        // Setting up the 2-way data-binding
         binding.merch = merch
 
+        // Setting up the save button click listener to facilitate the saving procedure.
         binding.saveBtn.setOnClickListener {
             if (validData(merch)) {
                 viewModel.addNewMerch(merch)
@@ -41,12 +43,21 @@ class AddNewFragment : Fragment() {
             }
         }
 
+        // Setting up the cancel button click listener to navigate up to the navigation hierarchy.
         binding.cancelBtn.setOnClickListener {
-            findNavController().navigate(AddNewFragmentDirections.actionAddNewFragmentToListingsFragment())
+            findNavController().navigateUp()
         }
 
+        // Returns the layout view
         return binding.root
     }
+
+    /**
+     * Validate that all the merch input data aren't blank.
+     *
+     * @param merch the Merch whose data to be validated.
+     * @return Return true if all merch data is not blank, false otherwise.
+     */
 
     private fun validData(merch: Merch): Boolean {
         return merch.name.isNotBlank() &&

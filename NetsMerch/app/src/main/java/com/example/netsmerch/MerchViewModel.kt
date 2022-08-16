@@ -7,11 +7,15 @@ import com.example.netsmerch.entities.Merch
 
 class MerchViewModel : ViewModel() {
 
+    // Encapsulating the _merchList LiveData
     private val _merchList = MutableLiveData<MutableList<Merch>>()
     val merchList: LiveData<MutableList<Merch>>
         get() = _merchList
 
 
+    /**
+     * Initialize the merch list data.
+     */
     private fun initMerchList() {
         _merchList.value = mutableListOf(
             Merch("Kidd #5 Jersey", "Adidas", "XL", "Nets Classic Jersey"),
@@ -23,9 +27,17 @@ class MerchViewModel : ViewModel() {
         )
     }
 
+
+    // Init block – runs after the primary constructor
     init {
         initMerchList()
     }
+
+    /**
+     * Adds a new merch to the merchList.
+     *
+     * @param merch the new Merch to be added to the list.
+     */
 
     fun addNewMerch(merch: Merch) {
         _merchList.value?.add(merch)

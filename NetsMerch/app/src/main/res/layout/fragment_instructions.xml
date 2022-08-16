@@ -76,7 +76,7 @@
             app:layout_constraintTop_toBottomOf="@id/in2TextView" />
 
         <Button
-            android:id="@+id/instructionsBtn"
+            android:id="@+id/listingsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
