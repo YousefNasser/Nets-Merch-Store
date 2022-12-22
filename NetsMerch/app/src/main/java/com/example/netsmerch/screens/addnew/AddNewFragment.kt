@@ -34,7 +34,7 @@ class AddNewFragment : Fragment() {
 
         // Setting up the save button click listener to facilitate the saving procedure.
         binding.saveBtn.setOnClickListener {
-            if (validData(merch)) {
+            if (validData()) {
                 viewModel.addNewMerch(merch)
                 findNavController().navigate(AddNewFragmentDirections.actionAddNewFragmentToListingsFragment())
             } else {
@@ -55,11 +55,10 @@ class AddNewFragment : Fragment() {
     /**
      * Validate that all the merch input data aren't blank.
      *
-     * @param merch the Merch whose data to be validated.
      * @return Return true if all merch data is not blank, false otherwise.
      */
 
-    private fun validData(merch: Merch): Boolean {
+    private fun validData(): Boolean {
         return merch.name.isNotBlank() &&
                 merch.company.isNotBlank() &&
                 merch.size.isNotBlank() &&
