@@ -20,6 +20,7 @@ class MerchViewModel : ViewModel() {
         _merchList.value = mutableListOf(
             Merch("Kidd #5 Jersey", "Adidas", "XL", "Nets Classic Jersey"),
             Merch("Claxton #33 Jersey", "Nike", "L", "Nets White Basquiat Jersey"),
+            Merch("Erving #32 Jersey", "Nike", "L", "Nets 72' Classic Jersey"),
             Merch("Harris #12 Jersey", "Nike", "S", "Nets City Edition Jersey"),
             Merch("Simmons #10 Jersey", "Nike", "L", "Nets Association White Jersey"),
             Merch("Mills #8 Jersey", "Nike", "M", "Nets Association Black Jersey"),
